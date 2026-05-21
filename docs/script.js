@@ -145,3 +145,102 @@ if (validationForm && inputName && feedbackMsg) {
         }
     });
 }
+
+// Contact Page
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm     = document.querySelector('#contact-form');
+    const fieldName       = document.querySelector('#userName');
+    const fieldEmail      = document.querySelector('#userEmail');
+    const fieldMessage    = document.querySelector('#userMessage');
+    const errorName       = document.querySelector('#error-name');
+    const errorEmail      = document.querySelector('#error-email');
+    const errorMessage    = document.querySelector('#error-message');
+    const contactFeedback = document.querySelector('#contact-feedback');
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function showError(field, errorEl, message) {
+        field.classList.add('error');
+        field.classList.remove('success');
+        errorEl.textContent = message;
+        errorEl.style.display = 'block';
+    }
+
+    function clearError(field, errorEl) {
+        field.classList.remove('error');
+        errorEl.textContent = '';
+        errorEl.style.display = 'none';
+    }
+
+    function markValid(field) {
+        field.classList.remove('error');
+        field.classList.add('success');
+    }
+
+    // Real-time feedback
+    fieldName.addEventListener('input', function () {
+        if (this.value.trim() !== '') clearError(this, errorName);
+    });
+
+    fieldEmail.addEventListener('input', function () {
+        if (this.value.trim() !== '') clearError(this, errorEmail);
+    });
+
+    fieldMessage.addEventListener('input', function () {
+        if (this.value.trim() !== '') clearError(this, errorMessage);
+    });
+
+    // Form submission
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const nameVal    = fieldName.value.trim();
+        const emailVal   = fieldEmail.value.trim();
+        const messageVal = fieldMessage.value.trim();
+
+        clearError(fieldName, errorName);
+        clearError(fieldEmail, errorEmail);
+        clearError(fieldMessage, errorMessage);
+        contactFeedback.textContent = '';
+
+        let isValid = true;
+
+        if (nameVal === '') {
+            showError(fieldName, errorName, '❌ Full name is required.');
+            isValid = false;
+        } else {
+            markValid(fieldName);
+        }
+
+        if (emailVal === '') {
+            showError(fieldEmail, errorEmail, '❌ Email address is required.');
+            isValid = false;
+        } else if (!emailPattern.test(emailVal)) {
+            showError(fieldEmail, errorEmail, '❌ Please enter a valid email (e.g. name@domain.com).');
+            isValid = false;
+        } else {
+            markValid(fieldEmail);
+        }
+
+        if (messageVal === '') {
+            showError(fieldMessage, errorMessage, '❌ Message cannot be empty.');
+            isValid = false;
+        } else if (messageVal.length < 10) {
+            showError(fieldMessage, errorMessage, '❌ Message must be at least 10 characters.');
+            isValid = false;
+        } else {
+            markValid(fieldMessage);
+        }
+
+        if (isValid) {
+            contactFeedback.textContent =
+                `✅ Thank you, ${nameVal}! Your message has been sent.`;
+            contactFeedback.style.color = '#16a34a';
+
+            contactForm.reset();
+            [fieldName, fieldEmail, fieldMessage].forEach(function (f) {
+                f.classList.remove('success', 'error');
+            });
+        }
+    });
+});
