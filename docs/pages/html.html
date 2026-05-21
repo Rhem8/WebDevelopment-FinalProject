@@ -1,0 +1,113 @@
+<!-- pages/html.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Topics</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebDev</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/html.html">HTML</a></li>
+            <li><a href="../pages/css.html">CSS</a></li>
+            <li><a href="../pages/javascript.html">JavaScript</a></li>
+            <li><a href="../pages/bootstrap.html">Bootstrap</a></li>
+            <li><a href="../pages/github.html">Git &amp; GitHub</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark</button>
+
+    </nav>
+
+    <header class="page-header">
+        <h1>HTML Topics</h1>
+        <p>
+            This section covers HTML (HyperText Markup Language) — the foundation of web development.
+            HTML uses tags and elements to structure the content that appears on every webpage.
+        </p>
+    </header>
+
+    <section class="topic-container">
+
+        <!-- INTRODUCTION CARD -->
+        <div class="topic-card">
+            <h2>Introduction &amp; Foundational Concepts</h2>
+            <p>
+                <strong>HyperText Markup Language (HTML)</strong> was created by
+                <em>Tim Berners-Lee in 1990</em>. It is the standard language used to
+                structure content on the World Wide Web.
+            </p>
+
+            <h3>The Core Definitions</h3>
+            <p>HTML combines two key ideas:</p>
+            <ul>
+                <li><strong>HyperText:</strong> Links that connect web pages to each other.</li>
+                <li><strong>Markup Language:</strong> Tags that tell the browser how to display content.</li>
+            </ul>
+        </div>
+
+        <!-- PDF VIEWER 1 -->
+        <div class="pdf-section">
+            <h2>Lesson PDF 1: Introduction to Basic HTML</h2>
+            <iframe
+                src="../lessons/htmlasset1.pdf"
+                width="100%"
+                height="600px">
+            </iframe>
+        </div>
+
+        <!-- PDF VIEWER 2 -->
+        <div class="pdf-section">
+            <h2>Lesson PDF 2: HTML Fundamentals</h2>
+            <iframe
+                src="../lessons/htmlasset2.pdf"
+                width="100%"
+                height="600px">
+            </iframe>
+        </div>
+
+        <!-- CODE SAMPLE -->
+        <div class="topic-card">
+            <h2>Basic HTML Document Structure</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Main Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            <p>
+                Every HTML file starts with this basic structure. The
+                <code>&lt;head&gt;</code> holds settings, and the
+                <code>&lt;body&gt;</code> holds visible content.
+            </p>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 | Web Development | Final Project Portfolio | Rimuel Loking</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
