@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clinic Booking</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container justify-content-center">
+    <span class="nav-title">
+      <h1>Rim's Clinic Appointment Booking</h1>
+    </span>
+  </div>
+</nav>
+
+<!-- MODE BUTTON (RIGHT SIDE BELOW NAVBAR) -->
+<div class="container mt-2 text-end">
+  <button onclick="toggleMode()" class="btn btn-secondary btn-sm">
+    Mode
+  </button>
+</div>
+
+<!-- MAIN -->
+<div class="container mt-4">
+  <div class="row">
+
+    <!-- BOX 1: FORM -->
+    <div class="col-md-6">
+      <div class="box">
+      <div class="border p-3">
+        <p>Book Appointment</p>
+
+        <input id="name" class="form-control mb-2" placeholder="Name">
+        <input id="date" type="date" class="form-control mb-2">
+        <input id="time" type="time" class="form-control mb-2">
+
+        <!-- FULL WIDTH BUTTON -->
+        <button onclick="book()" class="btn btn-primary w-100">
+          Book
+        </button>
+      </div>
+      </div>
+    </div>
+
+    <!-- BOX 2: OUTPUT -->
+    <div class="col-md-6">
+      <div class="box">
+      <div class="border p-3">
+        <p>Your Appointment</p>
+
+        <div id="output">No appointment yet</div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

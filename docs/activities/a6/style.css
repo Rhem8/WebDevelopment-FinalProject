@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #33008c, #000000);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #170231;
+    color: white;
+    padding: 25px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    margin-bottom: 25px;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 30px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #3498db;
+    border-radius: 5px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.container {
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #d395ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-text {
+    margin-top: 15px;
+    text-align: left;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+#output p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4e3ff;
+    padding: 3px;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border-left: 3px solid #3498db;
+}
+
+#output p button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: #0c0417;
+    color: rgb(128, 128, 128);
+    text-align: center;
+    padding: 15px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

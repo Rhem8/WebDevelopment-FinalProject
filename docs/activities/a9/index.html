@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WracknRead News</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">WracknRead</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#latest">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/id/237/1200/400" class="d-block w-100" alt="Tech News">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+          <h5>Galaxy Destroyer Diggy Dawg!?</h5>
+          <span class="badge bg-danger">Breaking</span>
+          <p>Galaxy Destroyer is actually nice and won't bite.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/id/1/1200/400" class="d-block w-100" alt="Space News">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+          <h5>Escaping the Matrix?</h5>
+          <span class="badge bg-info">Science</span>
+          <p>Tutorial on how to escape this cruel world we live in.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- LATEST STORIES -->
+  <section class="container my-5" id="latest">
+    <h2 class="mb-4">Latest Stories <span class="badge bg-success">New</span></h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/id/20/400/250" class="card-img-top" alt="Sports News">
+          <div class="card-body">
+            <h5 class="card-title">Study Tips</h5>
+            <p class="card-text">Improve your study with these methods.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#readMoreModal">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/id/21/400/250" class="card-img-top" alt="Economy News">
+          <div class="card-body">
+            <h5 class="card-title">Market Update</h5>
+            <p class="card-text">Economy crashing because of this heels.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#readMoreModal">Read More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/id/22/400/250" class="card-img-top" alt="Health News">
+          <div class="card-body">
+            <h5 class="card-title">Health Stuff</h5>
+            <p class="card-text">Experts share tips for a balanced lifestyle.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#readMoreModal">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="container my-5" id="faq">
+    <h2 class="mb-4">FAQs</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+            How do I subscribe?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Use the subscription form below with your name and email.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+            Is it free to join?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Yes! Subscribing is completely free.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE & CONTRIBUTORS -->
+  <section class="container my-5" id="subscribe">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <h3>Newsletter Signup</h3>
+        <form id="newsForm" class="needs-validation">
+          <div class="mb-3">
+            <label for="userName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="userName" required>
+          </div>
+          <div class="mb-3">
+            <label for="userEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="userEmail" required>
+          </div>
+          <button type="submit" class="btn btn-success">Join Community</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h3>Top Contributors</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr><th>#</th><th>Name</th><th>Articles</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>John Pork</td><td>24</td></tr>
+            <tr><td>2</td><td>Baby Boo</td><td>19</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="readMoreModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Full Story</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Full news article . . . . . . . . . . . . .</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERT PLACEHOLDER -->
+  <div class="container" id="liveAlertPlaceholder"></div>
+
+  <!-- FOOTER -->
+  <footer class="footer text-center mt-5">
+    <p>&copy; 2026 WracknRead News Portal</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

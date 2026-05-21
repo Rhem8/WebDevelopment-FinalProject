@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header{
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-menu li{
+    margin: 0.5rem 0;
+}
+
+.nav-menu a{
+    color: white;
+    text-decoration: none;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.menu, .testimonials{
+    background: #f4f4f4;
+    padding: 1rem;
+}
+
+footer{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ********************************************************* */
+
+/* Tablet screens */
+@media (min-width: 768px){
+    .nav-menu{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .main-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* Desktop screens */
+@media (min-width: 1025px){
+    .main-grid{
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+/* ********************************************************* */
+
+
+body{
+    font-size: 1rem;
+}
+
+header h1{
+    font-size: 2rem;
+}
+
+.menu, .testimonials{
+    padding: 1.5rem;
+}
+
+footer{
+    font-size: 0.9rem;
+}
+
+.main-grid{
+    width: 90%;
+}
+
+header{
+    padding: 2vh;
+}

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.75s;
+}
+
+header {
+    background: #170231;
+    color: white;
+    padding: 15px 20px 20px 20px;
+    text-align: center;
+    position: relative;
+
+}
+
+header h1 {
+    margin-bottom: 25px;
+}
+
+/* FLEX LAYOUT */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* SECTION BOXES */
+.section {
+    width: 28%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* DIFFERENT SECTION COLORS */
+.color-box {
+    background-color: #1553d8;
+    height: 131px;
+}
+
+.quiz-box {
+    background-color: #8c24d1;
+}
+
+.animation-box {
+    background-color: #e62281;
+    height: 400px;
+}
+
+/* BUTTON */
+button {
+    padding: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* ANIMATION BOX */
+#box {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: aqua;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: black;
+    color: white;
+}

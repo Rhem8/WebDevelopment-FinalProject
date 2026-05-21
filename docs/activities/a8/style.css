@@ -1,0 +1,35 @@
+body {
+  font-family: Arial;
+  background-color: white;
+}
+
+/* NAVBAR stays blue */
+nav {
+  background-color: #2c81ff;
+}
+
+/* NAVBAR TEXT */
+.nav-title {
+font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  padding: 10px 0; /* space top & bottom */
+  display: block;
+}
+
+/* BOXES have their own color */
+.box {
+  background-color: #5fafff; /* light color */
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* TEXT */
+p {
+  font-weight: bold;
+}
+
+/* DARK MODE (only background changes) */
+.dark {
+  background-color: #2d2d2d;
+}
