@@ -1,0 +1,263 @@
+<!-- pages/bootstrap.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebDev</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/html.html">HTML</a></li>
+            <li><a href="../pages/css.html">CSS</a></li>
+            <li><a href="../pages/javascript.html">JavaScript</a></li>
+            <li><a href="../pages/bootstrap.html">Bootstrap</a></li>
+            <li><a href="../pages/github.html">Git &amp; GitHub</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark</button>
+    </nav>
+
+    <header class="page-header">
+        <h1>Bootstrap Framework</h1>
+        <p>
+            This section covers Bootstrap 5 — a popular CSS framework that helps you
+            build responsive, mobile-first websites faster using ready-made components
+            and a 12-column grid system.
+        </p>
+    </header>
+
+    <section class="topic-container">
+
+        <!-- INTRODUCTION CARD -->
+        <div class="topic-card">
+            <h2>Introduction to Bootstrap</h2>
+            <p>The first lesson covers the core concepts, installation, and layout tools.</p>
+            <p>Topics included:</p>
+            <ul>
+                <li>What is Bootstrap? (History &amp; core features)</li>
+                <li>Three installation methods: CDN, npm, and local download</li>
+                <li>The 12-Column Grid System</li>
+                <li>Responsive breakpoints (xs, sm, md, lg, xl, xxl)</li>
+                <li>Advantages and trade-offs of using a CSS framework</li>
+            </ul>
+            <p>The PDF below covers the introduction, setup, and grid layout system.</p>
+        </div>
+
+        <!-- FIRST PDF VIEWER -->
+        <div class="pdf-section">
+            <h2>Lesson PDF 1: Introduction to Bootstrap Framework</h2>
+            <iframe
+                src="../lessons/bsasset1.pdf"
+                width="100%"
+                height="700px">
+            </iframe>
+        </div>
+
+        <!-- SAMPLE GRID CODE -->
+        <div class="topic-card">
+            <h2>Sample Bootstrap Grid Layout</h2>
+<pre>
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-8"&gt;
+            &lt;h2&gt;Main Content&lt;/h2&gt;
+            &lt;p&gt;Takes up 8 of 12 columns.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;h2&gt;Sidebar&lt;/h2&gt;
+            &lt;p&gt;Takes up 4 of 12 columns.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <p>
+                The grid automatically adjusts columns based on screen size using Bootstrap's breakpoint classes.
+            </p>
+        </div>
+
+        <!-- COMPONENTS CARD -->
+        <div class="topic-card">
+            <h2>Bootstrap Components &amp; JavaScript</h2>
+            <p>The second lesson covers Bootstrap's built-in UI components and JS integrations.</p>
+            <p>Key topics:</p>
+            <ul>
+                <li><strong>Core UI:</strong> Buttons, Cards, and responsive Navbars</li>
+                <li><strong>Forms &amp; Tables:</strong> Styled inputs and data tables</li>
+                <li><strong>Alerts &amp; Badges:</strong> Contextual notification styles</li>
+                <li><strong>Dynamic Components:</strong> Modals, Carousels, and Accordions</li>
+                <li><strong>Utilities:</strong> Flexbox, margin, padding, and text-alignment classes</li>
+                <li><strong>JS API:</strong> Programmatic control via <code>bootstrap.Modal</code>, etc.</li>
+            </ul>
+        </div>
+
+        <!-- SECOND PDF VIEWER -->
+        <div class="pdf-section">
+            <h2>Lesson PDF 2: Bootstrap Components &amp; JavaScript Integration</h2>
+            <iframe
+                src="../lessons/bsasset2.pdf"
+                width="100%"
+                height="700px">
+            </iframe>
+        </div>
+
+        <!-- JS API CODE SAMPLE -->
+        <div class="topic-card">
+            <h2>Sample Bootstrap JavaScript Usage</h2>
+<pre>
+&lt;button id="launchModal" class="btn btn-primary"&gt;Open Modal&lt;/button&gt;
+
+&lt;script&gt;
+    const btn = document.querySelector('#launchModal');
+
+    btn.addEventListener('click', function () {
+        const modal = new bootstrap.Modal('#systemControlModal');
+        modal.show();
+    });
+&lt;/script&gt;
+</pre>
+            <p>
+                This shows how Bootstrap components can be controlled with plain JavaScript.
+            </p>
+        </div>
+
+        <!-- LIVE BOOTSTRAP DEMO -->
+        <div class="bootstrap-runtime-scope py-4 bg-light text-dark rounded mb-4">
+
+            <div class="container-fluid px-4">
+
+                <!-- Alert -->
+                <div id="dynamicAlertAnchor" class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>System Notice:</strong> Bootstrap environment loaded. Interact with the components below.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <!-- Carousel -->
+                <section id="carouselSection" class="mb-5">
+                    <div id="dashboardHeroCarousel" class="carousel slide carousel-fade shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#dashboardHeroCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#dashboardHeroCarousel" data-bs-slide-to="1"></button>
+                        </div>
+                        <div class="carousel-inner" style="max-height: 380px; background: #0f172a;">
+                            <div class="carousel-item active p-5 text-center text-white">
+                                <img src="../assets/ntry1.jpeg" class="d-block w-100" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item p-5 text-center text-white">
+                                <img src="../assets/dtry1.jpeg" class="d-block w-100" alt="Slide 1">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#dashboardHeroCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#dashboardHeroCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Cards Grid -->
+                <section id="cardsSection" class="row g-4 mb-4">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-secondary shadow-sm">
+                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                <span>Modal Demo</span>
+                                <span class="badge bg-primary">Active</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Modal Launcher</h5>
+                                <p class="card-text text-secondary small">Opens a Bootstrap modal dialog programmatically via a JavaScript event listener.</p>
+                                <button id="triggerModalProgrammatically" class="btn btn-outline-primary btn-sm w-100 py-2">
+                                    Open Modal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 border-secondary shadow-sm">
+                            <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+                                <span>Carousel Demo</span>
+                                <span class="badge bg-warning text-dark">Observer</span>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Slide Controller</h5>
+                                <p class="card-text text-secondary small">Advances the carousel above by one slide using the Bootstrap JavaScript API.</p>
+                                <button id="triggerCarouselNext" class="btn btn-outline-dark btn-sm w-100 py-2">
+                                    Next Slide →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Accordion -->
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="accordion shadow-sm" id="frameworkAccordionNotes">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#accItemOne">
+                                        📚 Key Takeaway
+                                    </button>
+                                </h2>
+                                <div id="accItemOne" class="accordion-collapse collapse show" data-bs-parent="#frameworkAccordionNotes">
+                                    <div class="accordion-body small text-secondary">
+                                        <strong>Mobile-First:</strong> Bootstrap applies styles from smallest screens upward, ensuring a great experience on all devices.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="systemControlModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title fw-bold">Bootstrap Modal</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-secondary">
+                            <p>This modal was opened using <code>new bootstrap.Modal()</code> in JavaScript.</p>
+                            <div class="p-3 bg-light border rounded font-monospace small text-dark">
+                                Event: click → modal.show()
+                            </div>
+                        </div>
+                        <div class="modal-footer bg-light">
+                            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                            <button type="button" id="confirmModalPayload" class="btn btn-primary btn-sm px-4">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 | Web Development | Final Project Portfolio | Rimuel Loking</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+
+</body>
+</html>
