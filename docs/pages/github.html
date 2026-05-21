@@ -1,0 +1,148 @@
+<!-- pages/github.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git &amp; GitHub Topics</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebDev</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/html.html">HTML</a></li>
+            <li><a href="../pages/css.html">CSS</a></li>
+            <li><a href="../pages/javascript.html">JavaScript</a></li>
+            <li><a href="../pages/bootstrap.html">Bootstrap</a></li>
+            <li><a href="../pages/github.html">Git &amp; GitHub</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark</button>
+    </nav>
+
+    <header class="page-header">
+        <h1>Git &amp; GitHub</h1>
+        <p>
+            This section covers version control with Git and GitHub — tools that let
+            developers track changes, collaborate on code, and deploy websites to the web.
+        </p>
+    </header>
+
+    <section class="topic-container">
+
+        <!-- INTRODUCTION CARD -->
+        <div class="topic-card">
+            <h2>Git Basics &amp; Version Control</h2>
+            <p>
+                The first part of the lesson explores tracking code changes locally and understanding
+                the lifecycle of file states in Git.
+            </p>
+            <p>Topics included:</p>
+            <ul>
+                <li><strong>What is Version Control:</strong> Tracking history, reverting errors, and safe collaboration.</li>
+                <li><strong>The 3-Stage System:</strong> Working Directory, Staging Area, and Local Repository.</li>
+                <li><strong>Core Commands:</strong> <code>git init</code>, <code>git status</code>, and <code>git log</code>.</li>
+                <li><strong>Saving Progress:</strong> Staging with <code>git add</code> and committing with <code>git commit</code>.</li>
+                <li><strong>Remote Repos:</strong> Downloading existing repositories with <code>git clone</code>.</li>
+            </ul>
+            <p>The PDF below includes slides, diagrams, and command references.</p>
+        </div>
+
+        <!-- PDF VIEWER -->
+        <div class="pdf-section">
+            <h2>Lesson PDF: Version Control &amp; Deployment</h2>
+            <iframe
+                src="../lessons/gitasset1.pdf"
+                width="100%"
+                height="700px">
+            </iframe>
+        </div>
+
+        <!-- CODE SAMPLE 1 -->
+        <div class="topic-card">
+            <h2>Basic Local Git Workflow</h2>
+<pre>
+# 1. Start a new local repository
+git init
+
+# 2. Check which files have changed
+git status
+
+# 3. Stage all changes for the next commit
+git add .
+
+# 4. Commit the staged changes with a message
+git commit -m "feat: initial portfolio layout"
+
+# 5. View the commit history
+git log --oneline
+</pre>
+            <p>
+                This workflow takes a local change from your workspace,
+                stages it, and records it into Git history.
+            </p>
+        </div>
+
+        <!-- GITHUB & BRANCHING CARD -->
+        <div class="topic-card">
+            <h2>GitHub, Branching &amp; Deployment</h2>
+            <p>
+                The second half covers moving from a local machine to the cloud
+                for team collaboration and live hosting.
+            </p>
+            <p>Topics covered:</p>
+            <ul>
+                <li><strong>GitHub Platform:</strong> Repositories, visibility (public vs. private), and forks.</li>
+                <li><strong>Repository Essentials:</strong> <code>README.md</code> documentation and <code>.gitignore</code> for secrets.</li>
+                <li><strong>Safe Branching:</strong> <code>git branch</code> and <code>git checkout -b</code> for isolated features.</li>
+                <li><strong>Code Integration:</strong> Pull Requests and <code>git merge</code>.</li>
+                <li><strong>GitHub Pages:</strong> Free hosting for static HTML/CSS/JS websites.</li>
+            </ul>
+        </div>
+
+        <!-- CODE SAMPLE 2 -->
+        <div class="topic-card">
+            <h2>Branching &amp; Deployment Commands</h2>
+<pre>
+# Create and switch to a new feature branch
+git checkout -b feature/contact-form
+
+# [Make your code changes here...]
+
+# Commit changes to the feature branch
+git add .
+git commit -m "feat: contact form with validation"
+
+# Switch back to main and merge the feature
+git checkout main
+git merge feature/contact-form
+
+# Push to GitHub to trigger deployment
+git push origin main
+</pre>
+            <p>
+                Working on a separate branch keeps the main codebase safe.
+                Once tested, the branch is merged and pushed live.
+            </p>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 | Web Development | Final Project Portfolio | Rimuel Loking</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
