@@ -1,0 +1,102 @@
+<!-- pages/contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebDev</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/html.html">HTML</a></li>
+            <li><a href="../pages/css.html">CSS</a></li>
+            <li><a href="../pages/javascript.html">JavaScript</a></li>
+            <li><a href="../pages/bootstrap.html">Bootstrap</a></li>
+            <li><a href="../pages/github.html">Git &amp; GitHub</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark</button>
+    </nav>
+
+    <header class="page-header">
+        <h1>Contact Me</h1>
+        <p>
+            Have a question, feedback, or collaboration idea?
+            Fill out the form below and I'll get back to you.
+        </p>
+    </header>
+
+    <section class="topic-container">
+
+        <div class="topic-card">
+            <h2>Get in Touch</h2>
+
+            <form id="contact-form">
+
+                <!-- Full Name -->
+                <div class="contact-form-field">
+                    <label for="userName">Full Name</label>
+                    <input
+                        type="text"
+                        id="userName"
+                        name="name"
+                        placeholder="John Doe"
+                        autocomplete="name"
+                    >
+                    <p class="field-error" id="error-name"></p>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-form-field">
+                    <label for="userEmail">Email Address</label>
+                    <input
+                        type="text"
+                        id="userEmail"
+                        name="email"
+                        placeholder="johndoe@example.com"
+                        autocomplete="email"
+                    >
+                    <p class="field-error" id="error-email"></p>
+                </div>
+
+                <!-- Message -->
+                <div class="contact-form-field">
+                    <label for="userMessage">Your Message</label>
+                    <textarea
+                        id="userMessage"
+                        name="message"
+                        rows="6"
+                        placeholder="Write your message here..."
+                    ></textarea>
+                    <p class="field-error" id="error-message"></p>
+                </div>
+
+                <button type="submit" id="contact-submit">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 | Web Development | Final Project Portfolio | Rimuel Loking</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
