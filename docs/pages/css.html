@@ -1,0 +1,135 @@
+<!-- pages/css.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Topics</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>WebDev</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/html.html">HTML</a></li>
+            <li><a href="../pages/css.html">CSS</a></li>
+            <li><a href="../pages/javascript.html">JavaScript</a></li>
+            <li><a href="../pages/bootstrap.html">Bootstrap</a></li>
+            <li><a href="../pages/github.html">Git &amp; GitHub</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙 Dark</button>
+    </nav>
+
+    <header class="page-header">
+        <h1>CSS &amp; Responsive Design</h1>
+        <p>
+            This section covers Cascading Style Sheets (CSS) — the language used to style
+            HTML pages. CSS controls colors, spacing, fonts, layouts, and how a website
+            looks on different screen sizes.
+        </p>
+    </header>
+
+    <section class="topic-container">
+
+        <!-- OVERVIEW CARD -->
+        <div class="topic-card">
+            <h2>Overview of CSS</h2>
+            <p>
+                CSS (Cascading Style Sheets) describes the visual presentation of HTML documents.
+            </p>
+            <p>Topics covered in this lesson:</p>
+            <ul>
+                <li>CSS syntax and selectors</li>
+                <li>Properties and declarations</li>
+                <li>The CSS Box Model</li>
+                <li>Flexbox layouts</li>
+                <li>CSS Grid layouts</li>
+                <li>Responsive design principles</li>
+                <li>Media queries</li>
+                <li>Responsive CSS units</li>
+                <li>Mobile-first web design</li>
+            </ul>
+            <p>The PDF below contains the full lesson discussion and examples.</p>
+        </div>
+
+        <!-- PDF VIEWER -->
+        <div class="pdf-section">
+            <h2>Lesson PDF: CSS &amp; Responsive Design</h2>
+            <iframe
+                src="../lessons/cssasset1.pdf"
+                width="100%"
+                height="700px">
+            </iframe>
+        </div>
+
+        <!-- SAMPLE CSS -->
+        <div class="topic-card">
+            <h2>Sample CSS Code</h2>
+<pre>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+</pre>
+            <p>
+                This example shows basic CSS styling including colors,
+                spacing, typography, and Flexbox layout.
+            </p>
+        </div>
+
+        <!-- RESPONSIVE DESIGN CARD -->
+        <div class="topic-card">
+            <h2>Responsive Design</h2>
+            <p>
+                Responsive Web Design makes webpages adapt to different screen sizes —
+                phones, tablets, and desktops.
+            </p>
+            <ul>
+                <li>Uses flexible layouts and grids</li>
+                <li>Applies media queries for screen adjustments</li>
+                <li>Improves accessibility and user experience</li>
+                <li>Supports mobile-first development</li>
+            </ul>
+<pre>
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+</pre>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back to Dashboard</a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 | Web Development | Final Project Portfolio | Rimuel Loking</p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+</body>
+</html>
