@@ -1,0 +1,13 @@
+# Reflection
+
+The National Teachers College aims to develop students with good character and skills that can help the society.
+
+Doing this project taught me patience, responsibility, and hard work.
+There were many mistakes and problems while coding, but I kept practicing and fixing them until the project worked properly. 
+This experience helped me become more disciplined and motivated to learn.
+
+Since technology is becoming more important in the Philippines, many schools, businesses, and services now depend on websites and online systems.
+By learning web development, I gained skills that can be useful in the future and can help create better digital solutions for people.
+
+This project shows my effort, learning, and improvement in web development. 
+It may not be perfect, but it reflects the values of responsibility, perseverance, and continuous learning that the NTC encourages in its students.
